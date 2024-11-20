@@ -17,6 +17,7 @@ __
 
 ## - What will the detailed form be used for? What other forms might you need?
     We could have a feedback form where people can leave feedback on our project or give ideas about it.
+    Users can modify endings using the form. Once a user completes a story, they get a form popup and they can write in their endings and then their endings can be saved to the local storage.
 ## - What data would you need to store in Local storage for persistence?
     We can store the outcomes of a story and have that in the local storage like a throphy. e.g {Completed Obi Wan's Story}
 ## - What data will your app need? Is there an API or will you need to build your own dataset in a json file?
