@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -11,6 +13,11 @@
     --accent2: #a4ccc2;
 
     --header-color-on-bg: var(--accent1);
+    --header-color-on-white: var(--primary);
     --paragraph-color-on-bg: var(var(--accent2));
+    --paragraph-color-on-white: var(var(--secondary));
+
+    --header-font-family: "Source Sans 3", sans-serif;
+    --paragraph-font-family: "Merriweather", serif;
 }
 
