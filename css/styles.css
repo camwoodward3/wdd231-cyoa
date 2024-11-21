@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #0d0630;
+    --secondary: #5977b1;
+    --accent1: #f3fcd9;
+    --accent2: #a4ccc2;
+
+    --header-color-on-bg: var(--accent1);
+    --paragraph-color-on-bg: var(var(--accent2));
+}
+
