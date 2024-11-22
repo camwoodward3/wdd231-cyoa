@@ -11,18 +11,103 @@
     --secondary: #5977b1;
     --accent1: #f3fcd9;
     --accent2: #a4ccc2;
+    --white: #fff;
 
-    --header-color-on-bg: var(--accent1);
+    --header-color-on-bg: var(--white);
     --header-color-on-white: var(--primary);
-    --paragraph-color-on-bg: var(var(--accent2));
+    --paragraph-color-on-bg: var(--white);
     --paragraph-color-on-white: var(var(--secondary));
 
     --header-font-family: "Source Sans 3", sans-serif;
     --paragraph-font-family: "Merriweather", serif;
 }
 
+/* global stylings */
+body {
+    background-color: var(--primary);
+}
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--header-font-family);
+}
+
+a,
+p,
+span {
+    font-family: var(--paragraph-font-family);
+}
+
+
+/* header stylings */
+
+
+/* main stylings */
 .char_select img {
-    min-width: 200px;
-    max-width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.characters {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 1rem;
+}
+
+.character-card {
+    border-radius: 10px;
+    background-color: var(--secondary);
+    transition: transform 0.3s ease;
+}
+
+.character-card:hover {
+    transform: scale(1.05);
+}
+
+.character-card .image-container {
+    overflow: hidden;
+    height: 250px;
+}
+
+.character-card .image-container img {
+    border-radius: 10px 10px 0px 0px;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.character-card .details {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.character-card .details button {
+    background-color: var(--primary);
+    color: var(--paragraph-color-on-bg);
+    border: none;
+    width: 100px;
+    height: 30px;
+    font-weight: 600;
+    font-family: var(--header-font-family);
+}
+
+.character-card .details button:hover {
+    background-color: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+/* footer stylings */
+footer {
+    padding: 1rem;
+    text-align: center;
+    border-top: 1px solid black;
+    color: var(--paragraph-color-on-bg);
+    background-color: var(--secondary);
 }
