@@ -21,3 +21,8 @@
     --paragraph-font-family: "Merriweather", serif;
 }
 
+
+.char_select img {
+    min-width: 200px;
+    max-width: 200px;
+}
