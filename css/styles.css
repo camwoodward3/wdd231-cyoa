@@ -44,16 +44,26 @@ p,
 span {
     font-family: var(--paragraph-font-family);
     color: var(--paragraph-color-on-bg);
+    line-height: 1.5em;
+}
+
+.container {
+    max-width: 1400px;
+    margin: auto;
+    padding: 0 1rem;
 }
 
 
 /* header stylings */
-
+header {
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 1px solid var(--paragraph-color-on-bg);
+}
 
 /* main stylings */
-.char_select img {
-    height: 200px;
-    object-fit: cover;
+.intro {
+    margin: 2rem auto;
 }
 
 .characters {
@@ -65,7 +75,7 @@ span {
 
 .character-card {
     border-radius: 10px;
-    background-color: var(--secondary);
+    background-color: var(--primary);
     transition: transform 0.3s ease;
 }
 
@@ -79,6 +89,8 @@ span {
 }
 
 .character-card .image-container img {
+    height: 200px;
+    object-fit: cover;
     border-radius: 10px 10px 0px 0px;
     min-width: 100%;
     min-height: 100%;
@@ -94,17 +106,19 @@ span {
 .character-card .details button {
     background-color: var(--primary);
     color: var(--paragraph-color-on-bg);
-    border: none;
+    border: 1px solid var(--paragraph-color-on-bg);
+    border-radius: 4px;
     width: 100px;
     height: 30px;
     font-weight: 600;
     font-family: var(--header-font-family);
+    text-transform: uppercase;
 }
 
 .character-card .details button:hover {
-    background-color: transparent;
+    background: linear-gradient(180deg, var(--secondary), var(--paragraph-color-on-bg));
     color: var(--primary);
-    border: 1px solid var(--primary);
+    border: none;
 }
 
 .char_story {
