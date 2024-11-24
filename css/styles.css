@@ -24,7 +24,10 @@
     --paragraph-font-family: "Merriweather", serif;
 }
 
+
+
 /* global stylings */
+
 body {
     background: linear-gradient(135deg, #0d0630, #1a1f54, #4058a9);
 }
@@ -37,14 +40,33 @@ h5,
 h6 {
     font-family: var(--header-font-family);
     color: var(--header-color-on-bg);
+    line-height: 2em;
 }
 
 a,
 p,
-span {
+span,
+label,
+textarea {
     font-family: var(--paragraph-font-family);
     color: var(--paragraph-color-on-bg);
     line-height: 1.5em;
+}
+
+button {
+    background-color: var(--primary);
+    color: var(--paragraph-color-on-bg);
+    border: 1px solid var(--paragraph-color-on-bg);
+    border-radius: 4px;
+    font-weight: 600;
+    font-family: var(--header-font-family);
+    text-transform: uppercase;
+}
+
+button:hover {
+    background: linear-gradient(180deg, var(--secondary), var(--paragraph-color-on-bg));
+    color: var(--primary);
+    border: none;
 }
 
 .container {
@@ -54,17 +76,24 @@ span {
 }
 
 
+
 /* header stylings */
+
 header {
     padding: 2rem;
     text-align: center;
     border-bottom: 1px solid var(--paragraph-color-on-bg);
 }
 
+
+
 /* main stylings */
+
 .intro {
     margin: 2rem auto;
 }
+
+/* character select */
 
 .characters {
     display: grid;
@@ -104,28 +133,63 @@ header {
 }
 
 .character-card .details button {
-    background-color: var(--primary);
-    color: var(--paragraph-color-on-bg);
-    border: 1px solid var(--paragraph-color-on-bg);
-    border-radius: 4px;
     width: 100px;
     height: 30px;
-    font-weight: 600;
-    font-family: var(--header-font-family);
-    text-transform: uppercase;
 }
 
-.character-card .details button:hover {
-    background: linear-gradient(180deg, var(--secondary), var(--paragraph-color-on-bg));
-    color: var(--primary);
-    border: none;
-}
+/* character story */
 
 .char_story {
-    height: 50vh;
+    max-width: 1000px;
+    margin: 2rem auto;
 }
 
+.char_story p {
+    padding: 1em;
+}
+
+.char_story .choices {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.char_story .choices button {
+    padding: .8rem;
+}
+
+.char_story #story-ending-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 1rem auto;
+    padding: 15px;
+    border: 1px solid var(--paragraph-color-on-white);
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#story-ending-form textarea {
+    min-height: 80px;
+    padding: 10px;
+    border: 1px solid var(--secondary);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    outline: none;
+}
+
+#story-ending-form button {
+    padding: .7rem;
+}
+
+
+
 /* footer stylings */
+
 footer {
     padding: 2rem;
     text-align: center;
