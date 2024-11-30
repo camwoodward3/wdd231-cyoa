@@ -24,10 +24,7 @@
     --paragraph-font-family: "Merriweather", serif;
 }
 
-
-
 /* global stylings */
-
 body {
     background: linear-gradient(135deg, #0d0630, #1a1f54, #4058a9);
 }
@@ -75,26 +72,100 @@ button:hover {
     padding: 0 1rem;
 }
 
-
-
 /* header stylings */
-
 header {
-    padding: 2rem;
-    text-align: center;
+    padding: 1rem;
+    background-color: var(--primary);
     border-bottom: 1px solid var(--paragraph-color-on-bg);
 }
 
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: auto;
+}
 
+h1 {
+    font-size: 1.8rem;
+    font-family: var(--header-font-family);
+    color: var(--header-color-on-bg);
+    margin: 0;
+}
+
+nav {
+    margin: 0;
+}
+
+.nav-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background-color: var(--primary);
+    color: var(--paragraph-color-on-bg);
+    font-family: var(--header-font-family);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 4px;
+}
+
+.dropbtn:hover {
+    background: var(--secondary);
+    color: var(--primary);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: var(--primary);
+    min-width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content li {
+    list-style: none;
+}
+
+.dropdown-content a {
+    color: var(--paragraph-color-on-bg);
+    text-decoration: none;
+    display: block;
+    padding: 0.8rem 1.2rem;
+    font-family: var(--paragraph-font-family);
+}
+
+.dropdown-content a:hover {
+    background: var(--secondary);
+    color: var(--primary);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 
 /* main stylings */
-
 .intro {
     margin: 2rem auto;
 }
 
 /* character select */
-
 .characters {
     display: grid;
     gap: 1rem;
@@ -138,7 +209,6 @@ header {
 }
 
 /* character story */
-
 .char_story {
     max-width: 1000px;
     margin: 2rem auto;
@@ -186,10 +256,7 @@ header {
     padding: .7rem;
 }
 
-
-
 /* footer stylings */
-
 footer {
     padding: 2rem;
     text-align: center;
