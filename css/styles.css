@@ -8,21 +8,286 @@
 
 :root {
     --primary: #0d0630;
-    --secondary: #5977b1;
-    --accent1: #f3fcd9;
-    --accent2: #a4ccc2;
+    --secondary: #4058a9;
+    --dark-primary: #300606;
+    --dark-secondary: #aa4040;
 
-    --header-color-on-bg: var(--accent1);
-    --header-color-on-white: var(--primary);
-    --paragraph-color-on-bg: var(var(--accent2));
-    --paragraph-color-on-white: var(var(--secondary));
+    --accent1: #d4e157;
+    --accent2: #f57f17;
+
+    --white: #e8f5e9;
+
+    --header-color-on-bg: #ffffff;
+    --header-color-on-white: #0d0630;
+    --paragraph-color-on-bg: #b3c5e5;
+    --dark-paragraph-color-on-bg: #e6b3b3;
+    --paragraph-color-on-white: #2e3b5e;
 
     --header-font-family: "Source Sans 3", sans-serif;
     --paragraph-font-family: "Merriweather", serif;
 }
 
+/* global stylings */
+body {
+    background: linear-gradient(135deg, #0d0630, #1a1f54, #4058a9);
+}
 
-.char_select img {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--header-font-family);
+    color: var(--header-color-on-bg);
+    line-height: 2em;
+}
+
+a,
+p,
+span,
+label,
+textarea {
+    font-family: var(--paragraph-font-family);
+    color: var(--paragraph-color-on-bg);
+    line-height: 1.5em;
+}
+
+.dark-character-card p {
+    color: var(--dark-paragraph-color-on-bg);
+}
+.character-card button, .dark-character-card button{
+    border-radius: 4px;
+    font-weight: 600;
+    font-family: var(--header-font-family);
+    text-transform: uppercase;
+}
+
+.character-card button {
+    background-color: var(--primary);
+    color: var(--paragraph-color-on-bg);
+    border: 1px solid var(--paragraph-color-on-bg);
+}
+
+.dark-character-card button {
+    background-color: var(--dark-primary);
+    color: var(--dark-paragraph-color-on-bg);
+    border: 1px solid var(--dark-paragraph-color-on-bg);
+}
+.character-card button:hover, .choices button:hover{
+    background: linear-gradient(180deg, var(--secondary), var(--paragraph-color-on-bg));
+    color: var(--primary);
+    border: none;
+}
+
+.dark-character-card button:hover {
+    background: linear-gradient(180deg, var(--dark-secondary), var(--dark-paragraph-color-on-bg));
+    color: var(--dark-primary);
+    border: none;
+}
+
+.container {
+    max-width: 1400px;
+    margin: auto;
+    padding: 0 1rem;
+}
+
+/* header stylings */
+header {
+    padding: 1rem;
+    background-color: var(--primary);
+    border-bottom: 1px solid var(--paragraph-color-on-bg);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-family: var(--header-font-family);
+    color: var(--header-color-on-bg);
+    margin: 0;
+}
+
+nav {
+    margin: 0;
+}
+
+.nav-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background-color: var(--primary);
+    color: var(--paragraph-color-on-bg);
+    font-family: var(--header-font-family);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 4px;
+}
+
+.dropbtn:hover {
+    background: var(--secondary);
+    color: var(--primary);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: var(--primary);
     min-width: 200px;
-    max-width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content li {
+    list-style: none;
+}
+
+.dropdown-content a {
+    color: var(--paragraph-color-on-bg);
+    text-decoration: none;
+    display: block;
+    padding: 0.8rem 1.2rem;
+    font-family: var(--paragraph-font-family);
+}
+
+.dropdown-content a:hover {
+    background: var(--secondary);
+    color: var(--primary);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* main stylings */
+.intro {
+    margin: 2rem auto;
+}
+
+/* character select */
+.characters {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 1rem;
+}
+
+.character-card, .dark-character-card{
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.character-card {
+    background-color: var(--primary);
+}
+
+.dark-character-card {
+    background-color: var(--dark-primary);
+}
+
+.character-card:hover, .dark-character-card:hover {
+    transform: scale(1.05);
+}
+
+
+.character-card .image-container, .dark-character-card .image-container {
+    overflow: hidden;
+    height: 250px;
+}
+
+.character-card .image-container img, .dark-character-card .image-container img {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0px 0px;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.character-card .details, .dark-character-card .details{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.character-card .details button, .dark-character-card .details button{
+    width: 100px;
+    height: 30px;
+}
+
+/* character story */
+.char_story {
+    max-width: 1000px;
+    margin: 2rem auto;
+}
+
+.char_story p {
+    padding: 1em;
+}
+
+.char_story .choices {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.char_story .choices button {
+    padding: .8rem;
+}
+
+.char_story #story-ending-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 1rem auto;
+    padding: 15px;
+    border: 1px solid var(--paragraph-color-on-white);
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#story-ending-form textarea {
+    min-height: 80px;
+    padding: 10px;
+    border: 1px solid var(--secondary);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    outline: none;
+}
+
+#story-ending-form button {
+    padding: .7rem;
+}
+
+/* footer stylings */
+footer {
+    padding: 2rem;
+    text-align: center;
+    border-top: 1px solid var(--paragraph-color-on-bg);
+    color: var(--paragraph-color-on-bg);
 }
