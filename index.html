@@ -1,53 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Choose Your Own Adventure</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
+    <!DOCTYPE html>
+    <html lang="en">
 
-<body>
-    <header>
-        <div class="header-container">
-            <nav>
-                <ul class="nav-menu">
-                    <li class="dropdown">
-                        <button class="dropbtn">Menu</button>
-                        <ul class="dropdown-content">
-                            <li><a href="#intro">Introduction</a></li>
-                            <li><a href="#char_select">Character Selection</a></li>
-                            <li><a href="#char_story">Your Story</a></li>
-                            <!-- Can be adjusted accordingly -->
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-            <h1>Star Wars Choose Your Own Adventure</h1>
-        </div>
-    </header>
-    <main>
-        <section class="intro container">
-            <h2>Welcome to the Star Wars Adventure</h2>
-            <p>Step into the galaxy far, far away and embark on a thrilling adventure. Choose your character
-                and make decisions that will determine your path. Will you follow the light side or embrace the
-                dark side? The adventure is in your hands!</p>
-        </section>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Choose Your Own Adventure</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
 
-        <section class="char_select container">
-            <h2>Select your Character:</h2>
-            <div class="characters">
-                <div class="character-card">
-                    <div class="image-container">
-                        <img src="images/anakin.jpg" alt="Anakin Skywalker">
+    <body>
+        <header>
+            <div class="header-container">
+                <nav>
+                    <ul class="nav-menu">
+                        <li class="dropdown">
+                            <button class="dropbtn">Menu</button>
+                            <ul class="dropdown-content">
+                                <li><a href="#intro">Introduction</a></li>
+                                <li><a href="#char_select">Character Selection</a></li>
+                                <li><a href="#char_story">Your Story</a></li>
+                                <!-- Can be adjusted accordingly -->
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <h1>Star Wars Choose Your Own Adventure</h1>
+            </div>
+        </header>
+        <main>
+            <section class="intro container">
+                <h2>Welcome to the Star Wars Adventure</h2>
+                <p>Step into the galaxy far, far away and embark on a thrilling adventure. Choose your character
+                    and make decisions that will determine your path. Will you follow the light side or embrace the
+                    dark side? The adventure is in your hands!</p>
+            </section>
+
+            <section class="char_select container">
+                <h2>Select your Character:</h2>
+                <div class="characters">
+                    <div class="character-card">
+                        <div class="image-container">
+                            <img src="images/anakin.jpg" alt="Anakin Skywalker">
+                        </div>
+                        <div class="details">
+                            <h3>Anakin Skywalker</h3>
+                            <p>He was considered one of the strongest Jedi in the Jedi Order.</p>
+                            <button>Select</button>
+                        </div>
                     </div>
-                    <div class="details">
-                        <h3>Anakin Skywalker</h3>
-                        <p>He was considered one of the strongest Jedi in the Jedi Order.</p>
-                        <button>Select</button>
-                    </div>
-                </div>
                 <div class="character-card">
                     <div class="image-container">
                         <img src="images/obiwan.jpeg" alt="Obi-Wan Kenobi">
@@ -78,67 +79,67 @@
                         <button>Select</button>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="char_story container">
-            <h2>Character Story: <span id="character-name">Anakin Skywalker</span></h2>
-            <p id="story-intro">
-                You are Anakin Skywalker, once a Jedi Knight, now facing the toughest decisions of your life. You stand
-                at the
-                precipice of destiny, knowing that the choices you make will shape the future of the galaxy. Will you
-                stay loyal
-                to the Jedi Order, or will the Dark Side claim your soul?
-            </p>
-
-            <p id="story-part1">
-                You receive a mysterious message from Emperor Palpatine. The voice beckons you to embrace your true
-                power and
-                destroy the Jedi. You stand in the midst of the Jedi Temple, your lightsaber in hand, unsure whether to
-                follow
-                the path of peace or plunge into a future of darkness.
-            </p>
-
-            <div class="choices">
-                <button id="choice-1" onclick="startDarkPath()">Embrace the Dark Side</button>
-                <button id="choice-2" onclick="stayLoyal()">Stay Loyal to the Jedi</button>
-            </div>
-
-            <div id="dark-side-story" class="story-path">
-                <p>
-                    As you give in to the Dark Side, the power surges within you. You are unstoppable. The Jedi are no
-                    match for
-                    your wrath. The galaxy trembles at your might.
+                </div>
+            </section>
+            <section class="char_story container">
+                <h2>Character Story: <span id="character-name">Anakin Skywalker</span></h2>
+                <p id="story-intro">
+                    You are Anakin Skywalker, once a Jedi Knight, now facing the toughest decisions of your life. You stand
+                    at the
+                    precipice of destiny, knowing that the choices you make will shape the future of the galaxy. Will you
+                    stay loyal
+                    to the Jedi Order, or will the Dark Side claim your soul?
                 </p>
-                <p>
-                    <strong>Ending:</strong> You become the Emperor's enforcer, ruling the galaxy with an iron fist. The
-                    Jedi are
-                    no more, and the Republic falls into chaos.
-                </p>
-            </div>
 
-            <div id="loyal-story" class="story-path">
-                <p>
-                    You resist the Emperor’s temptations and remain loyal to the Jedi. Your path takes you to a final battle
-                    against the forces of darkness.
+                <p id="story-part1">
+                    You receive a mysterious message from Emperor Palpatine. The voice beckons you to embrace your true
+                    power and
+                    destroy the Jedi. You stand in the midst of the Jedi Temple, your lightsaber in hand, unsure whether to
+                    follow
+                    the path of peace or plunge into a future of darkness.
                 </p>
-                <p>
-                    <strong>Ending:</strong> You lead the remaining Jedi in a final battle, defeating the Sith, but at great cost.
-                    Peace is restored, but the Jedi Order is forever changed.
-                </p>
-            </div>
-            
-            <form id="story-ending-form">
-                <h3>Modify the Ending:</h3>
-                <label for="new-ending">Write your custom ending:</label>
-                <textarea id="new-ending" name="new-ending" rows="4" cols="50"></textarea>
-                <button type="submit">Save Ending</button>
-            </form>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 CYOA | Mason, Enoch, and Cam. All Star Wars content is property of Lucasfilm Ltd. and Disney.</p>
-        <p>"May the Force be with you!"</p>
-    </footer>
-</body>
 
-</html>
+                <div class="choices">
+                    <button id="choice-1" onclick="startDarkPath()">Embrace the Dark Side</button>
+                    <button id="choice-2" onclick="stayLoyal()">Stay Loyal to the Jedi</button>
+                </div>
+
+                <div id="dark-side-story" class="story-path">
+                    <p>
+                        As you give in to the Dark Side, the power surges within you. You are unstoppable. The Jedi are no
+                        match for
+                        your wrath. The galaxy trembles at your might.
+                    </p>
+                    <p>
+                        <strong>Ending:</strong> You become the Emperor's enforcer, ruling the galaxy with an iron fist. The
+                        Jedi are
+                        no more, and the Republic falls into chaos.
+                    </p>
+                </div>
+
+                <div id="loyal-story" class="story-path">
+                    <p>
+                        You resist the Emperor’s temptations and remain loyal to the Jedi. Your path takes you to a final battle
+                        against the forces of darkness.
+                    </p>
+                    <p>
+                        <strong>Ending:</strong> You lead the remaining Jedi in a final battle, defeating the Sith, but at great cost.
+                        Peace is restored, but the Jedi Order is forever changed.
+                    </p>
+                </div>
+                
+                <form id="story-ending-form">
+                    <h3>Modify the Ending:</h3>
+                    <label for="new-ending">Write your custom ending:</label>
+                    <textarea id="new-ending" name="new-ending" rows="4" cols="50"></textarea>
+                    <button type="submit">Save Ending</button>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 CYOA | Mason, Enoch, and Cam. All Star Wars content is property of Lucasfilm Ltd. and Disney.</p>
+            <p>"May the Force be with you!"</p>
+        </footer>
+    </body>
+
+    </html>

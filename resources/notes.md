@@ -11,7 +11,18 @@ _This is for CYOA(choose your own adventure) and Starwars fans._
 _Responsive Pages_
 _Fetch functions_
 _Animations features_
-__
+
+# Requirements
+### At least one detailed, validated form
+### Local storage for persistence
+### Fetching data from an API or json file.
+### Drop-down menu
+### CSS Animation
+### Responsive design
+### Good user experience (UX) and accessibility
+### URL parameters (data that is passed from page to page in an app through the URL, for example https://example.com/page2.html?id=34 Send the id of 34 to the code running at page2.html)
+### Use of modules for organization
+
 
 # How the project requirements listed below will be met.
 
