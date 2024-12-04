@@ -1,0 +1,20 @@
+{
+    "stories": {
+      "light": {
+        "template": {
+          "intro": "{{characterName}} stands at the crossroads of destiny. As a guardian of peace and justice in the galaxy, their resolve is tested when they discover a plot threatening the Republic.",
+          "part1": "Receiving a distress signal from {{ally}}, {{characterName}} ventures to the desolate planet {{planet}}. There, they confront a band of mercenaries hired by the Sith.",
+          "ending_good": "After defeating the Sith forces, {{characterName}} restores balance to the Force, ensuring peace for generations.",
+          "ending_bad": "In a tragic twist, {{characterName}} succumbs to temptation, compromising their values for power. The galaxy falls into chaos."
+        }
+      },
+      "dark": {
+        "template": {
+          "intro": "{{characterName}} embraces the call of the Dark Side, driven by ambition and anger. Their journey begins with the betrayal of their allies.",
+          "part1": "{{characterName}} joins forces with {{mentor}}, leading an assault on {{enemyStronghold}}. Their power grows as they eliminate all who oppose them.",
+          "ending_good": "In an unexpected turn, {{characterName}} finds redemption, sacrificing themselves to destroy their dark master.",
+          "ending_bad": "{{characterName}} rises as the Emperor's enforcer, ruling the galaxy with fear and unchallenged might."
+        }
+      }
+    }
+  }
