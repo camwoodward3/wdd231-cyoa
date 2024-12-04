@@ -44,3 +44,13 @@ function renderCharacters() {
     charactersElement.innerHTML = html.join("");
 }
 renderCharacters();
+import { getPeopleData } from "./swapi.mjs";
+
+
+async function init() {
+    const people = getPeopleData();
+    console.log(people);
+}
+
+init();
+
