@@ -15,7 +15,11 @@ function characterTemplate(character) {
     return `<h2>Character Story: <span id="character-name">${story.name}</span></h2>
     <p id="story-intro">
         ${story.intro}
-    </p>`
+    </p>
+    <p id="story-part1>
+    </p>
+    `
+    
 
  }   
 
