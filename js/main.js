@@ -11,13 +11,6 @@ function characterTemple(character) {
         </div>`;
     }
 
-function renderCharacters(data) {
-    const charactersElement = document.querySelector(".characters");
-    charactersElement.innerHTML = "";
-    const html = characters.map(characterTemple);
-    charactersElement.innerHTML = html.join("");
-}
-
 async function init() {
     const people = getPeopleData();
     console.log(people);
