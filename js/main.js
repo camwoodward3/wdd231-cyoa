@@ -26,7 +26,7 @@ function characterTemplate(character) {
 function renderCharacters(data) {
     const charactersElement = document.querySelector(".characters");
     charactersElement.innerHTML = "";
-    const html = characters.map(characterTemplate);
+    const html = characters.map(characterTemple);
     charactersElement.innerHTML = html.join("");
 }
 
