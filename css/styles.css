@@ -197,10 +197,10 @@ nav {
 }
 
 /* character select */
-.characters {
+#characters {
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     padding: 1rem;
 }
 
@@ -208,15 +208,6 @@ nav {
     background-color: var(--primary);
     transition: 0.5s;
     border-radius: 10px 10px 10px 10px;
-}
-
-.dark-character {
-    background-color: var(--dark-primary);
-}
-
-.character-card .image-container {
-    border-radius: 10px;
-    background-color: var(--primary);
 }
 
 .character-card:hover {
@@ -253,6 +244,12 @@ nav {
 .character-card .details button {
     width: 100px;
     height: 30px;
+}
+
+/* dark character */
+
+.dark-character {
+    background-color: var(--dark-primary);
 }
 
 .dark-character p {

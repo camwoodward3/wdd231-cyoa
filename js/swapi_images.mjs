@@ -1,14 +1,14 @@
 const characterImages = {
-    "Luke Skywalker": "images/luke.jpg",
-    "C-3PO": "images/c3po.jpg",
-    "R2-D2": "images/r2d2.jpg",
-    "Darth Vader": "images/vader.jpg",
-    "Leia Organa": "images/leia.jpg",
-    "Owen Lars": "images/owen.jpg",
-    "Beru Whitesun lars": "images/beru.jpg",
-    "R5-D4": "images/r5d4.jpg",
-    "Biggs Darklighter": "images/biggs.jpg",
-    "Obi-Wan Kenobi": "images/obiwan.jpg"
+    "Luke Skywalker": "images/luke.jpeg",
+    "C-3PO": "images/c3po.jpeg",
+    "R2-D2": "images/r2d2.jpeg",
+    "Darth Vader": "images/vader.jpeg",
+    "Leia Organa": "images/leia.jpeg",
+    "Owen Lars": "images/owen.jpeg",
+    "Beru Whitesun lars": "images/beru.jpeg",
+    "R5-D4": "images/r5d4.jpeg",
+    "Biggs Darklighter": "images/biggs.jpeg",
+    "Obi-Wan Kenobi": "images/obiwan.jpeg"
 };
 
 export default characterImages;

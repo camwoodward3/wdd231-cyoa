@@ -1,13 +1,14 @@
 // Please create your character card template here and export it for use
-import { characterImages } from "./swapi_images.mjs";
+import characterImages from "./swapi_images.mjs";
 
 export function characterCardTemplate(character) {
-    const imagePath = characterImages[character.name] || "images/default.jpg";
+    const imagePath = characterImages[character.name] || "images/default.jpeg";
+    console.log(imagePath);
 
     return `
         <div class="character-card">
             <div class="image-container>
-                <img src="images/${imagePath}" alt="${character.name}">
+                <img src="${imagePath}" alt="${character.name}">
             </div>
             <div class="details">
                 <h3>${character.name}</h3>
@@ -15,8 +16,7 @@ export function characterCardTemplate(character) {
                 <p>Height: <span>${character.height}</span></p>
                 <p>Eye Color: <span>${character.eye_color}</span></p>
                 <p>Hair Color: <span>${character.hair_color}</span></p>
-                <p>Home World: <span>${character.homeworld}</span></p>
                 <button>Select</button>
             </div>
-        <div>`;
+        </div>`;
     }
