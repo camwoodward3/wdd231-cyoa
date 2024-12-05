@@ -1,3 +1,5 @@
+// Please create your character card template here and export it for use
+
 function characterTemple(character) {
     return `<div class="image-container>
             <img src="images/${character.imgSrc}" alt="${character.name}">
