@@ -13,7 +13,10 @@ function characterTemplate(character) {
 
  function lightStoryTemplate(story) {
     return `<h2>Character Story: <span id="character-name">${story.name}</span></h2>
-    <p id="story-intro">`
+    <p id="story-intro">
+        ${story.intro}
+    </p>`
+
  }   
 
 function renderCharacters(data) {
