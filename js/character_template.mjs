@@ -1,12 +1,15 @@
 // Please create your character card template here and export it for use
 
-function characterTemple(character) {
-    return `<div class="image-container>
-            <img src="images/${character.imgSrc}" alt="${character.name}">
-        </div>
-        <div class="details">
-            <h3>${character.name}</h3>
-            <p>${character.info}</p>
-            <button>Select</button>
-        </div>`;
+export function characterCardTemplate(character) {
+    return `
+        <div class="character-card">
+            <div class="image-container>
+                <img src="images/${character.name}" alt="${character.name}">
+            </div>
+            <div class="details">
+                <h3>${character.name}</h3>
+                <p>${character.info}</p>
+                <button>Select</button>
+            </div>
+        <div>`;
     }

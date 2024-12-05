@@ -12,3 +12,5 @@ const characterImages = {
 };
 
 // we need to create images for these 10 characters.
+
+// In the character card
