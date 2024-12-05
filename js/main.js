@@ -1,6 +1,6 @@
 import { getPeopleData } from "./swapi.mjs";
 
-function characterTemple(character) {
+function characterTemplate(character) {
     return `<div class="image-container>
             <img src="images/${character.imgSrc}" alt="${character.name}">
         </div>
@@ -11,10 +11,15 @@ function characterTemple(character) {
         </div>`;
     }
 
+ function lightStoryTemplate(story) {
+    return `<h2>Character Story: <span id="character-name">${story.name}</span></h2>
+    <p id="story-intro">`
+ }   
+
 function renderCharacters(data) {
     const charactersElement = document.querySelector(".characters");
     charactersElement.innerHTML = "";
-    const html = characters.map(characterTemple);
+    const html = characters.map(characterTemplate);
     charactersElement.innerHTML = html.join("");
 }
 
