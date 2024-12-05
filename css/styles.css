@@ -243,6 +243,13 @@ nav {
     gap: 10px;
 }
 
+.character-card .details span {
+    text-transform: uppercase;
+    font-family: var(--header-font-family);
+    color: var(--header-color-on-bg);
+    font-weight: 600;
+}
+
 .character-card .details button {
     width: 100px;
     height: 30px;

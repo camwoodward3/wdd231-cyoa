@@ -11,6 +11,6 @@ const characterImages = {
     "Obi-Wan Kenobi": "images/obiwan.jpg"
 };
 
-// we need to create images for these 10 characters.
+export default characterImages;
 
-// In the character card
+// We need to create images for these 10 characters.
