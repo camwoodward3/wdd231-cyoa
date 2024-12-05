@@ -211,7 +211,7 @@ nav {
 }
 
 .character-card:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .character-card .image-container {
@@ -220,6 +220,8 @@ nav {
 }
 
 .character-card .image-container img {
+    color: var(--white);
+    font-family: var(--paragraph-font-family);
     height: 200px;
     object-fit: cover;
     border-radius: 10px 10px 0px 0px;

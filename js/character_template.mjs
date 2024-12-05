@@ -2,12 +2,12 @@
 import characterImages from "./swapi_images.mjs";
 
 export function characterCardTemplate(character) {
-    const imagePath = characterImages[character.name] || "images/default.jpeg";
+    const imagePath = characterImages[character.name];
     console.log(imagePath);
 
     return `
         <div class="character-card">
-            <div class="image-container>
+            <div class="image-container">
                 <img src="${imagePath}" alt="${character.name}">
             </div>
             <div class="details">
