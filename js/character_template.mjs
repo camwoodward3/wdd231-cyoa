@@ -3,7 +3,6 @@ import characterImages from "./swapi_images.mjs";
 
 export function characterCardTemplate(character) {
     const imagePath = characterImages[character.name];
-    console.log(imagePath);
 
     return `
         <div class="character-card">
