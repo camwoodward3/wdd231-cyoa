@@ -21,7 +21,7 @@ function characterTemple(character) {
             <p>${character.info}</p>
             <button>Select</button>
         </div>`;
-    }
+}
 
 async function init() {
     const people = await getPeopleData();
