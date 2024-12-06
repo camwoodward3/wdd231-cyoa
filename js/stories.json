@@ -4,7 +4,13 @@
         "template": {
           "intro": "{{characterName}} stands at the crossroads of destiny. As a guardian of peace and justice in the galaxy, their resolve is tested when they discover a plot threatening the Republic.",
           "part1": "Receiving a distress signal from {{ally}}, {{characterName}} ventures to the desolate planet {{planet}}. There, they confront a band of mercenaries hired by the Sith.",
+          "loyal_onclick": "stayLoyal",
+          "loyal_choice": "Stay Loyal to your allies",
+          "dark_onclick": "startDarkPath",
+          "dark_choice": "Embrace the Dark Side",
+          "loyal_path": "You resist the Dark Side of the Force and remain loyal to your allies. Your path takes you to a final battle against the forces of darkness.",
           "ending_good": "After defeating the Sith forces, {{characterName}} restores balance to the Force, ensuring peace for generations.",
+          "dark_path": "As you give in to the Dark Side, the power surges within you. You are unstoppable. The forces of good are no match for your wrath. The galaxy becomes to tremble at your might.",
           "ending_bad": "In a tragic twist, {{characterName}} succumbs to temptation, compromising their values for power. The galaxy falls into chaos."
         }
       },
