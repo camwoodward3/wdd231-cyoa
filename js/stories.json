@@ -18,8 +18,14 @@
         "template": {
           "intro": "{{characterName}} embraces the call of the Dark Side, driven by ambition and anger. Their journey begins with the betrayal of their allies.",
           "part1": "{{characterName}} joins forces with {{mentor}}, leading an assault on {{enemyStronghold}}. Their power grows as they eliminate all who oppose them.",
-          "ending_good": "In an unexpected turn, {{characterName}} finds redemption, sacrificing themselves to destroy their dark master.",
-          "ending_bad": "{{characterName}} rises as the Emperor's enforcer, ruling the galaxy with fear and unchallenged might."
+          "dark_onclick": "startDarkPath",
+          "dark_choice": "Embrace the Dark Side",
+          "loyal_onclick": "stayLoyal",
+          "loyal_choice": "Stay Loyal to your allies",
+          "dark_path": "As you give in to the Dark Side, the power surges within you. You are unstoppable. The forces of good are no match for your wrath. The galaxy becomes to tremble at your might.",
+          "loyal_path": "You resist the Dark Side of the Force and remain loyal to your allies. Your path takes you to a final battle against the forces of darkness.",
+          "ending_bad": "{{characterName}} rises as the Emperor's enforcer, ruling the galaxy with fear and unchallenged might.",
+          "ending_good": "In an unexpected turn, {{characterName}} finds redemption, sacrificing themselves to destroy their dark master."
         }
       }
     }
