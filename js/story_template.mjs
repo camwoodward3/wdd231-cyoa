@@ -1,6 +1,6 @@
 // Please create the story template in here and export for use.
 
-function lightStoryTemplate(story) {
+export default function lightStoryTemplate(story) {
     return `
     <h2>Character Story: <span id="character-menu">${story.characterName}</span></h2>
     <p id="story-intro>${story.intro}</p>
@@ -23,7 +23,7 @@ function lightStoryTemplate(story) {
     </div>`
 }
 
-function DarkStoryTemplate(story) {
+export default function DarkStoryTemplate(story) {
     return `
     <h2>Character Story: <span id="character-menu">${story.characterName}</span></h2>
     <p id="story-intro>${story.intro}</p>
