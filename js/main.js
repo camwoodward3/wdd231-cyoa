@@ -1,5 +1,7 @@
 import { getPeopleData } from "./swapi.mjs";
 import { characterCardTemplate } from "./character_template.mjs";
+import { storyTemplate } from "./story_template.mjs";
+
 
 function renderCharacterCards(peopleData) {
     // This function will render the character card; and add a class of dark-character if the character is evil
@@ -22,6 +24,20 @@ function characterTemple(character) {
             <button>Select</button>
         </div>`;
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const characterSelect = document.getElementById('characterSelect');
+    const storyDiv = document.getElementById('story');
+
+    characterSelect.addEventListener('change', () => {
+        const selectedCharacter = characterSelect.value;
+        if (selectedCharacter && stories[selectedCharacter]) {
+            storyDiv.innerHTML = stories[selectedCharacter];
+        } else {
+            storyDiv.innerHTML = 'Character story not found.';
+        }
+    })
+})
 
 async function init() {
     const people = await getPeopleData();
