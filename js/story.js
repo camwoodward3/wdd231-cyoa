@@ -1,5 +1,6 @@
 import { getPersonData } from "./swapi_data.mjs";
 import { getStoryData } from "./story_data.mjs";
+import { saveToLocalStorage, getFromLocalStorage } from "./local_storage.mjs";
 
 import { storyTitleTemplate,
     storyIntroTemplate,
@@ -23,6 +24,40 @@ function renderStory(person, story_data) {
     document.querySelector("#story-part2").innerHTML = storyPart2Template(story_data);
     document.querySelector("#story-part3").innerHTML = storyPart3Template(story_data);
     document.querySelector("#ending").innerHTML = storyEndingTemplate(story_data);
+
+    const savedEnding = getFromLocalStorage("starWarsCustomEnfing");
+    const endingHTML = savedEnding
+        ? `<strong>Ending:</strong> ${savedEnding}`
+        : storyEndingTemplate(story_data);
+    document.querySelector("#ending").innerHTML = endingHTML;
+
+    setupCustomEndingForm();
+}
+
+function setupCustomEndingForm() {
+    const storyEndingForm = document.getElementById("story-ending-form");
+    const newEndingTextarea = document.getElementById("new-ending");
+    const endingDisplay = document.querySelector("#ending");
+
+    storyEndingForm.addEventListener("submit", (event) => {
+        event.preventDefault(); // Prevent page refresh
+
+        const newEnding = newEndingTextarea.value.trim();
+        if (newEnding) {
+            // Save the custom ending
+            saveToLocalStorage("starWarsCustomEnding", newEnding);
+
+            // Update the ending display
+            endingDisplay.innerHTML =  `<strong>Ending:</strong> ${newEnding}`;
+
+            // Clear the textarea
+            newEndingTextarea.value = "";
+
+            alert("Your custom ending has been saved!");
+        } else {
+            alert("Please write an ending before saving.");
+        }
+    })
 }
 
 async function init() {
@@ -31,6 +66,7 @@ async function init() {
     const personData = await getPersonData(person);
     const StoryData = await getStoryData();
     renderStory( personData.results[0], StoryData);
+    
     console.log(personData);
     console.log(StoryData);
     console.log(id);

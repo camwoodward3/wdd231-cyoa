@@ -308,6 +308,7 @@ main {
 
 #ending strong {
     color: var(--white);
+    font-size: 1.2em;
 }
 
 .char_story #story-ending-form {
@@ -345,4 +346,11 @@ footer {
     border-top: 1px solid var(--paragraph-color-on-bg);
     color: var(--paragraph-color-on-bg);
 
+}
+
+/* Ending */
+#ending {
+    color: var(--paragraph-color-on-bg);
+    font-family: var(--paragraph-font-family);
+    padding: 1em;
 }
