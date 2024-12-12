@@ -26,10 +26,11 @@ function renderStory(person, story_data) {
 }
 
 async function init() {
-    const id = getParam("name");
-    const personData = await getPersonData("");
+    const id = 1;
+    const person = getParam("character");
+    const personData = await getPersonData(person);
     const StoryData = await getStoryData();
-    renderStory(personData, StoryData);
+    renderStory( personData.results[0], StoryData);
     console.log(personData);
     console.log(StoryData);
     console.log(id);
