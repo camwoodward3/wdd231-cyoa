@@ -16,6 +16,6 @@ export async function getPeopleData() {
 }
 
 export async function getPersonData(name) {
-    const data = getJson("people/" + name);
+    const data = getJson("people/?search=" + name);
     return data;
 }
