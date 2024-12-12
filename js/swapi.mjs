@@ -1,13 +1,19 @@
 const baseUrl = "https://swapi.dev/api/";
 
+async function fetchJson(url) {
+    const response = await fetch(url);
+    if (!response.ok) {
+        throw new Error("Response not ok");
+    }
+    return response.json();
+}
+
 export async function getPeopleData() {
-    let data = {};
-    const response = await fetch(baseUrl + "people");
-    // check to make sure the reponse was ok.
-    if (response.ok) {
-        // convert to JSON
-        data = await response.json();
-    } else throw new Error("response not ok");
-    // return just the first row of the data object
-    return data.results;
+    const data = await fetchJson(baseUrl + "people");
+    return data.results; 
+}
+
+export async function getPersonData(id) {
+    const data = await fetchJson(baseUrl + "people/" + id);
+    return data;
 }

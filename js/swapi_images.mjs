@@ -5,7 +5,7 @@ const characterImages = {
     "Darth Vader": "images/vader.jpeg",
     "Leia Organa": "images/leia.jpeg",
     "Owen Lars": "images/owen.jpeg",
-    "Beru Whitesun Lars": "images/beru.jpeg",
+    "Beru Whitesun lars": "images/beru.jpeg",
     "R5-D4": "images/r5d4.jpeg",
     "Biggs Darklighter": "images/biggs.jpeg",
     "Obi-Wan Kenobi": "images/obiwan.jpeg"

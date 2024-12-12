@@ -15,7 +15,7 @@ export function characterCardTemplate(character) {
                 <p>Height: <span>${character.height}</span></p>
                 <p>Eye Color: <span>${character.eye_color}</span></p>
                 <p>Hair Color: <span>${character.hair_color}</span></p>
-                <button>Select</button>
+                <a href="story.html?character=${index}" class="select-link">Select</a>
             </div>
         </div>`;
     }

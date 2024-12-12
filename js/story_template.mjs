@@ -1,52 +1,56 @@
-// Please create the story template in here and export for use.
-
-export function storyTemplate(story) {
-    lightStoryTemplate(story);
-    darkStoryTemplate(story);
+// Create a story template for light and dark side characters and export for use
+export function storyTemplate(story, side) {
+    if (side === "good") {
+        return lightStoryTemplate(story);
+    } else if (side === "bad") {
+        return darkStoryTemplate(story);
+    } else {
+        throw new Error("Invalid side specified. Must be 'good' or 'bad'.");
+    }
 }
 
 function lightStoryTemplate(story) {
     return `
-    <h2>Character Story: <span id="character-menu">${story.characterName}</span></h2>
-    <p id="story-intro>${story.intro}</p>
-    <p id="story-part1>${story.part1}</p>
+    <h2>Character Story: <span id="character-name">${story.characterName}</span></h2>
+    <p id="story-intro">${story.intro}</p>
+    <p id="story-part1">${story.part1}</p>
     <div class="choices">
         <button id="choice-1" onclick="${story.loyal_onclick}()">${story.loyal_choice}</button>
         <button id="choice-2" onclick="${story.dark_onclick}()">${story.dark_choice}</button>
     </div>
-    <div id="loyal-story" class="story-path>
-        <p id="loyal-choice>${story.loyal_path}</p>
-        <p id="ending-good>
-            <strong>Ending:</strong>${story.ending_good}
+    <div id="loyal-story" class="story-path">
+        <p id="loyal-choice">${story.loyal_path}</p>
+        <p id="ending-good">
+            <strong>Ending:</strong> ${story.ending_good}
         </p>
     </div>
-    <div id="dark-side-story" class="story-path>
-        <p id="dark-choice>${story.dark_path}</p>
-        <p id="ending-bad>
-            <strong>Ending:</strong>${story.ending_bad}
+    <div id="dark-side-story" class="story-path">
+        <p id="dark-choice">${story.dark_path}</p>
+        <p id="ending-bad">
+            <strong>Ending:</strong> ${story.ending_bad}
         </p>
-    </div>`
+    </div>`;
 }
 
 function darkStoryTemplate(story) {
     return `
-    <h2>Character Story: <span id="character-menu">${story.characterName}</span></h2>
-    <p id="story-intro>${story.intro}</p>
-    <p id="story-part1>${story.part1}</p>
+    <h2>Character Story: <span id="character-name">${story.characterName}</span></h2>
+    <p id="story-intro">${story.intro}</p>
+    <p id="story-part1">${story.part1}</p>
     <div class="choices">
         <button id="choice-1" onclick="${story.dark_onclick}()">${story.dark_choice}</button>
         <button id="choice-2" onclick="${story.loyal_onclick}()">${story.loyal_choice}</button>
     </div>
-    <div id="dark-side-story" class="story-path>
-        <p id="dark-choice>${story.dark_path}</p>
-        <p id="ending-bad>
-            <strong>Ending:</strong>${story.ending_bad}
+    <div id="dark-side-story" class="story-path">
+        <p id="dark-choice">${story.dark_path}</p>
+        <p id="ending-bad">
+            <strong>Ending:</strong> ${story.ending_bad}
         </p>
     </div>
-    <div id="loyal-story" class="story-path>
-        <p id="loyal-choice>${story.loyal_path}</p>
-        <p id="ending-good>
-            <strong>Ending:</strong>${story.ending_good}
+    <div id="loyal-story" class="story-path">
+        <p id="loyal-choice">${story.loyal_path}</p>
+        <p id="ending-good">
+            <strong>Ending:</strong> ${story.ending_good}
         </p>
-    </div>`
+    </div>`;
 }
