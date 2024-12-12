@@ -45,7 +45,7 @@
         "endings": {
           "good": "{{characterName}} restores balance to the galaxy.",
           "evil": "{{characterName}} becomes the galaxy’s most feared force.",
-          "mixed": "Their fate remains uncertain."
+          "mixed": "{{characterName}}'s fate remains uncertain."
         }
       }
     },

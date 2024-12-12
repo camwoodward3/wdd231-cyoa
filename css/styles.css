@@ -81,7 +81,7 @@ h1 {
     margin: 0;
 }
 
-button {
+.btn {
     background-color: var(--primary);
     color: var(--paragraph-color-on-bg);
     border: 1px solid var(--paragraph-color-on-bg);
@@ -89,12 +89,20 @@ button {
     font-weight: 600;
     font-family: var(--header-font-family);
     text-transform: uppercase;
+    text-decoration: none;
+    transition: all .5s;
 }
 
-button:hover {
+.btn:hover {
     background: linear-gradient(180deg, var(--secondary), var(--paragraph-color-on-bg));
     color: var(--primary);
-    border: none;
+    border: 1px transparent;
+}
+
+.select-link {
+    width: fit-content;
+    padding: .3rem 1rem;
+    text-align: center;
 }
 
 .container {
@@ -192,6 +200,9 @@ nav {
 }
 
 /* main stylings */
+main {
+    padding-bottom: 2rem;
+}
 
 .intro {
     margin: 2rem auto;
@@ -293,6 +304,10 @@ nav {
 
 .char_story .choices button {
     padding: .8rem;
+}
+
+#ending strong {
+    color: var(--white);
 }
 
 .char_story #story-ending-form {
