@@ -5,7 +5,7 @@ const characterSides = {
     "Darth Vader": "bad",
     "Leia Organa": "good",
     "Owen Lars": "neutral",
-    "Beru Whitesun Lars": "neutral",
+    "Beru Whitesun lars": "neutral",
     "R5-D4": "neutral",
     "Biggs Darklighter": "good",
     "Obi-Wan Kenobi": "good"

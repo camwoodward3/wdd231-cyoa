@@ -1,6 +1,9 @@
-import { getPersonData } from "./swapi.mjs";
-import { characterCardTemplate } from "./character_template.mjs";
-import { storyTemplate } from "./story_template.mjs";
+import { getPersonData } from "./swapi_data.mjs";
+import { getStoryData } from "./story_data.mjs";
+
+import { storyTitleTemplate,
+    storyIntroTemplate
+ } from "./story_template.mjs";
 
 function getParam(param) {
     const search = location.search;
@@ -8,13 +11,19 @@ function getParam(param) {
     return params.get(param);
 }
 
-function renderStory(params) {
+function renderStory(person, story_data) {
     // This function will render the story template for characters
+    document.querySelector("#story_title").innerHTML = storyTitleTemplate(person);
+    document.querySelector("#story-intro").innerHTML = storyIntroTemplate(story_data);
 }
 
 async function init() {
-    const person = await getPersonData(10);
-    console.log(person);
+    const id = 1;
+    const personData = await getPersonData(id);
+    const StoryData = await getStoryData();
+    renderStory(personData, StoryData);
+    console.log(personData);
+    console.log(StoryData);
 }
 
 init();

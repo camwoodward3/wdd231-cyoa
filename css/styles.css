@@ -192,11 +192,13 @@ nav {
 }
 
 /* main stylings */
+
 .intro {
     margin: 2rem auto;
 }
 
 /* character select */
+
 #characters {
     display: grid;
     gap: 1rem;
@@ -272,6 +274,7 @@ nav {
 
 
 /* character story */
+
 .char_story {
     max-width: 1000px;
     margin: 2rem auto;
@@ -285,6 +288,7 @@ nav {
     display: flex;
     justify-content: center;
     gap: 1rem;
+    margin: 1rem 0;
 }
 
 .char_story .choices button {

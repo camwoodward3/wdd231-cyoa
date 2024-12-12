@@ -1,4 +1,4 @@
-import { getPeopleData } from "./swapi.mjs";
+import { getPeopleData } from "./swapi_data.mjs";
 import { characterCardTemplate } from "./character_template.mjs";
 
 
@@ -11,7 +11,6 @@ function renderCharacterCards(peopleData) {
 
 async function init() {
     const people = await getPeopleData();
-    console.log(people[0]);
     renderCharacterCards(people);
     console.log(people);
 }
