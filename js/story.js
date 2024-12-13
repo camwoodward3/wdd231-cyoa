@@ -25,6 +25,16 @@ function renderStory(person, story_data) {
     document.querySelector("#ending").innerHTML = storyEndingTemplate(story_data);
 }
 
+async function init2() {
+    const id = getParam("id");
+    const personData = await getPersonData(id);
+    const StoryData = await getStoryData();
+    renderStory( personData, StoryData);
+    console.log(personData);
+    console.log(StoryData);
+    console.log(id);
+}
+
 async function init() {
     const id = 1;
     const person = getParam("character");

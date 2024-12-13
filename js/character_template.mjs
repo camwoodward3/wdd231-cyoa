@@ -1,8 +1,10 @@
 // Please create your character card template here and export it for use
 import characterImages from "./swapi_images.mjs";
+import characterID from "./swapi_id.mjs";
 
 export function characterCardTemplate(character) {
     const imagePath = characterImages[character.name];
+    const id = characterID[character.name];
     return `
         <div class="character-card">
             <div class="image-container">
@@ -17,4 +19,4 @@ export function characterCardTemplate(character) {
                 <a href="stories.html?character=${character.name}" class="btn select-link">Select</a>
             </div>
         </div>`;
-    }
+}
