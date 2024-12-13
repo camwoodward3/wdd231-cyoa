@@ -60,26 +60,15 @@ function setupCustomEndingForm() {
     })
 }
 
-async function init2() {
-    const id = getParam("id");
-    const personData = await getPersonData(id);
-    const StoryData = await getStoryData();
-    renderStory( personData, StoryData);
-    console.log(personData);
-    console.log(StoryData);
-    console.log(id);
-}
-
 async function init() {
-    const id = 1;
-    const person = getParam("character");
-    const personData = await getPersonData(person);
+    const name = getParam("character");
+    const personData = await getPersonData(name);
     const StoryData = await getStoryData();
     renderStory( personData.results[0], StoryData);
-    
+
+    console.log(name);
     console.log(personData);
     console.log(StoryData);
-    console.log(id);
 }
 
 init();
