@@ -4,9 +4,7 @@ import { saveToLocalStorage, getFromLocalStorage } from "./local_storage.mjs";
 
 import { storyTitleTemplate,
     storyIntroTemplate,
-    storyPart1Template,
-    storyPart2Template,
-    storyPart3Template,
+    storyPartTemplate,
     storyEndingTemplate
  } from "./story_template.mjs";
 
@@ -17,15 +15,15 @@ function getParam(param) {
 }
 
 function renderStory(person, story_data) {
-    // This function will render the story template for characters
     document.querySelector("#story_title").innerHTML = storyTitleTemplate(person);
     document.querySelector("#story-intro").innerHTML = storyIntroTemplate(story_data);
-    document.querySelector("#story-part1").innerHTML = storyPart1Template(story_data);
-    document.querySelector("#story-part2").innerHTML = storyPart2Template(story_data);
-    document.querySelector("#story-part3").innerHTML = storyPart3Template(story_data);
-    document.querySelector("#ending").innerHTML = storyEndingTemplate(story_data);
 
-    const savedEnding = getFromLocalStorage("starWarsCustomEnfing");
+    const storyParts = story_data.stories.ancientProphecy.template;
+    document.querySelector("#story-part1").innerHTML = storyPartTemplate(storyParts.part1);
+    document.querySelector("#story-part2").innerHTML = storyPartTemplate(storyParts.part2);
+    document.querySelector("#story-part3").innerHTML = storyPartTemplate(storyParts.part3);
+
+    const savedEnding = getFromLocalStorage("starWarsCustomEnding");
     const endingHTML = savedEnding
         ? `<strong>Ending:</strong> ${savedEnding}`
         : storyEndingTemplate(story_data);
