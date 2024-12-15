@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Own Adventure</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="module" src="js/ending.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <nav>
+                <ul class="nav-menu">
+                    <li class="dropdown">
+                        <button class="dropbtn">Menu</button>
+                        <ul class="dropdown-content">
+                            <li><a href="#intro">Introduction</a></li>
+                            <li><a href="#char_select">Character Selection</a></li>
+                            <li><a href="#char_story">Your Story</a></li>
+                            <!-- Can be adjusted accordingly -->
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <h1>Star Wars Choose Your Own Adventure</h1>
+        </div>
+    </header>
+    <main>
+        <section class="endings-section container">
+            <h2>Your Endings</h2>
+            <div id="endings-container">
+                <!-- Endings will be dynamically rendered here -->
+            </div>
+
+            <button id="clear-all-endings" class="btn">Clear All Endings</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 CYOA | Mason, Enoch, and Cam. All Star Wars content is property of Lucasfilm Ltd. and Disney.</p>
+        <p>"May the Force be with you!"</p>
+    </footer>
+</body>
+
+</html>
