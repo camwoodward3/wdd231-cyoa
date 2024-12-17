@@ -1,4 +1,4 @@
-import { getPeopleData } from "./swapi_data.mjs";
+import { getPeopleData, getPersonData } from "./swapi_data.mjs";
 import { characterCardTemplate } from "./character_template.mjs";
 
 

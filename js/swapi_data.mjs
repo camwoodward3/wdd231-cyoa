@@ -1,4 +1,4 @@
-const baseUrl = "https://swapi.dev/api/";
+const baseUrl = "https://www.swapi.tech/api/";
 
 async function getJson(endpoint) {
     const response = await fetch(baseUrl + endpoint)
@@ -15,7 +15,7 @@ export async function getPeopleData() {
     return data.results;
 }
 
-export async function getPersonData(name) {
-    const data = getJson("people/?search=" + name);
-    return data;
+export async function getPersonData(uid) {
+    const data = await getJson("people/" + uid);
+    return data.result;
 }

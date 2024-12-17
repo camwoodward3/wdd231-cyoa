@@ -1,0 +1,104 @@
+{
+  "stories": {
+    "ancientProphecy": {
+      "template": {
+        "intro": "The galaxy teeters on the brink of chaos. {{characterName}}, a Force-sensitive individual born into uncertain times, must navigate the treacherous path of destiny. The echoes of war rumble across the stars, and {{characterName}} feels a calling to take a stand—but for what cause? This is the story of their rise to greatness or descent into infamy.",
+        "part1": {
+          "text": "While exploring an ancient ruin on {{planet}}, {{characterName}} uncovers a forgotten Jedi holocron whispering of an ancient prophecy. However, the ruin is guarded by a mercenary faction working for a Sith Lord. {{characterName}} must decide their approach",
+          "choices": {
+            "good": {
+              "onclick": "convinceMercenaries",
+              "choice_text": "Convince the mercenaries to abandon their mission.",
+              "next" : "part2"
+            },
+            "evil": {
+              "onclick": "slayMercenaries",
+              "choice_text": "Slay the mercenaries to seize the holocron.",
+              "next" : "part"
+            }
+          }
+        },
+        "part2": {
+          "text": "Having acquired the holocron, {{characterName}} learns of the Starforge Crystal, an artifact capable of creating limitless weapons of war or harnessing peace across the galaxy. The Sith have also discovered its location. On their journey to {{planet2}}, {{characterName}} encounters a small village under siege by a Sith battalion. A choice arises",
+          "choices": {
+            "good": {
+              "onclick": "protectVillage",
+              "choice_text": "Protect the village."
+            },
+            "evil": {
+              "onclick": "ignoreVillage",
+              "choice_text": "Ignore the villagers’ plight."
+            }
+          }
+        },
+        "part3": {
+          "text": "{{characterName}} reaches the Starforge Crystal deep within the Caverns of Light and Shadow. There, they face a final choice: destroy the crystal to prevent its misuse or harness its power for themselves. {{characterName}} is confronted by a vision of their future, a reflection of all their choices leading to this moment",
+          "choices": {
+            "good": {
+              "onclick": "destroyCrystal",
+              "choice_text": "Destroy the crystal, sacrificing its potential for the greater good."
+            },
+            "evil": {
+              "onclick": "absorbCrystal",
+              "choice_text": "Absorb its energy, becoming a being of unrivaled power"
+            }
+          }
+        },
+        "endings": {
+          "good": "{{characterName}} restores balance to the galaxy.",
+          "evil": "{{characterName}} becomes the galaxy’s most feared force.",
+          "mixed": "{{characterName}}'s fate remains uncertain."
+        }
+      }
+    },
+    "lostHeir": {
+      "template": {
+        "intro": "Rumors of a lost heir to the Mandalorian throne reach {{characterName}}, thrusting them into a dangerous pursuit...",
+        "part1": {
+          "text": "A bounty hunter confronts {{characterName}} with cryptic information...",
+          "choices": {
+            "good": {
+              "onclick": "helpHunter",
+              "choice_text": "Assist the bounty hunter."
+            },
+            "evil": {
+              "onclick": "betrayHunter",
+              "choice_text": "Betray the bounty hunter for the information."
+            }
+          }
+        },
+        "part2": {
+          "text": "Following the trail, {{characterName}} uncovers an artifact tied to the Mandalorian legacy...",
+          "choices": {
+            "good": {
+              "onclick": "defendArtifact",
+              "choice_text": "Defend the artifact."
+            },
+            "evil": {
+              "onclick": "stealArtifact",
+              "choice_text": "Steal the artifact for yourself."
+            }
+          }
+        },
+        "part3": {
+          "text": "At the gates of the Mandalorian enclave, {{characterName}} must decide the heir's fate...",
+          "choices": {
+            "good": {
+              "onclick": "restoreHeir",
+              "choice_text": "Restore the heir to their rightful place."
+            },
+            "evil": {
+              "onclick": "usurpThrone",
+              "choice_text": "Usurp the throne for yourself."
+            }
+          }
+        },
+        "endings": {
+          "good": "{{characterName}} brings honor and stability to Mandalore.",
+          "evil": "{{characterName}} rules Mandalore with an iron fist.",
+          "mixed": "The legacy of Mandalore remains shrouded in uncertainty."
+        }
+      }
+    }
+  }
+}

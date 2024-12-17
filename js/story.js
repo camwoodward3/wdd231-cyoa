@@ -1,12 +1,14 @@
 import { getPersonData } from "./swapi_data.mjs";
 import { getStoryData } from "./story_data.mjs";
 import { saveToLocalStorage, getFromLocalStorage } from "./local_storage.mjs";
+import {
+    storyTitleTemplate,
+    storyTemplate
+} from "./story_template.mjs";
 
-import { storyTitleTemplate,
-    storyIntroTemplate,
-    storyPartTemplate,
-    storyEndingTemplate
- } from "./story_template.mjs";
+let currentChoice = "";
+let personData = {};
+let StoryData = {};
 
 function getParam(param) {
     const search = location.search;
@@ -14,14 +16,20 @@ function getParam(param) {
     return params.get(param);
 }
 
+function reRender(ev) {
+    currentChoice = ev.target.id
+    renderStory(personData, StoryData)
+}
+
 function renderStory(person, story_data) {
     document.querySelector("#story_title").innerHTML = storyTitleTemplate(person);
-    document.querySelector("#story-intro").innerHTML = storyIntroTemplate(story_data);
+    document.querySelector("#story_container").innerHTML = storyTemplate(story_data.nodes[currentChoice]);
 
-    const storyParts = story_data.stories.ancientProphecy.template;
-    document.querySelector("#story-part1").innerHTML = storyPartTemplate(storyParts.part1);
-    document.querySelector("#story-part2").innerHTML = storyPartTemplate(storyParts.part2);
-    document.querySelector("#story-part3").innerHTML = storyPartTemplate(storyParts.part3);
+    const choiceBtn = document.querySelectorAll(".choiceBtn");
+
+    choiceBtn.forEach( button => {
+        button.addEventListener("click", reRender)
+    })
 
     const savedEnding = getFromLocalStorage("starWarsCustomEnding");
     const endingHTML = savedEnding
@@ -46,7 +54,7 @@ function setupCustomEndingForm() {
             saveToLocalStorage("starWarsCustomEnding", newEnding);
 
             // Update the ending display
-            endingDisplay.innerHTML =  `<strong>Ending:</strong> ${newEnding}`;
+            endingDisplay.innerHTML = `<strong>Ending:</strong> ${newEnding}`;
 
             // Clear the textarea
             newEndingTextarea.value = "";
@@ -59,12 +67,13 @@ function setupCustomEndingForm() {
 }
 
 async function init() {
-    const name = getParam("character");
-    const personData = await getPersonData(name);
-    const StoryData = await getStoryData();
-    renderStory( personData.results[0], StoryData);
+    const id = getParam("id");
+    personData = await getPersonData(id);
+    StoryData = await getStoryData();
+    currentChoice = StoryData.start;
+    renderStory(personData, StoryData);
 
-    console.log(name);
+    console.log(id);
     console.log(personData);
     console.log(StoryData);
 }

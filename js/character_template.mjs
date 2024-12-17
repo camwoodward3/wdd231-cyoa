@@ -10,11 +10,7 @@ export function characterCardTemplate(character) {
             </div>
             <div class="details">
                 <h3>${character.name}</h3>
-                <p>Gender: <span>${character.gender}</span></p>
-                <p>Height: <span>${character.height}</span></p>
-                <p>Eye Color: <span>${character.eye_color}</span></p>
-                <p>Hair Color: <span>${character.hair_color}</span></p>
-                <a href="stories.html?character=${character.name}" class="btn select-link">Select</a>
+                <a href="stories.html?id=${character.uid}" class="btn select-link">Select</a>
             </div>
         </div>`;
 }

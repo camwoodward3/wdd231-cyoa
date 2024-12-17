@@ -1,102 +1,80 @@
 {
-  "stories": {
-    "ancientProphecy": {
-      "template": {
-        "intro": "The galaxy teeters on the brink of chaos. {{characterName}}, a Force-sensitive individual born into uncertain times, must navigate the treacherous path of destiny. The echoes of war rumble across the stars, and {{characterName}} feels a calling to take a stand—but for what cause? This is the story of their rise to greatness or descent into infamy.",
-        "part1": {
-          "text": "While exploring an ancient ruin on {{planet}}, {{characterName}} uncovers a forgotten Jedi holocron whispering of an ancient prophecy. However, the ruin is guarded by a mercenary faction working for a Sith Lord. {{characterName}} must decide their approach",
-          "choices": {
-            "good": {
-              "onclick": "convinceMercenaries",
-              "choice_text": "Convince the mercenaries to abandon their mission."
-            },
-            "evil": {
-              "onclick": "slayMercenaries",
-              "choice_text": "Slay the mercenaries to seize the holocron."
-            }
-          }
+    "title": "The Jedi's Journey",
+    "start": "start",
+    "nodes": {
+        "start": {
+            "text": "You stand at the edge of the Jedi Temple on Coruscant, gazing out at the bustling city-planet below. You've just been knighted as a Jedi, but the galaxy is at war, and your path forward is uncertain. What will you do?",
+            "choices": [
+                {
+                    "text": "Join the Republic forces in the Clone Wars.",
+                    "go_to": "join_war"
+                },
+                {
+                    "text": "Investigate a disturbance in the Force.",
+                    "go_to": "investigate_force"
+                },
+                {
+                    "text": "Seek guidance from the Jedi Council.",
+                    "go_to": "seek_guidance"
+                }
+            ]
         },
-        "part2": {
-          "text": "Having acquired the holocron, {{characterName}} learns of the Starforge Crystal, an artifact capable of creating limitless weapons of war or harnessing peace across the galaxy. The Sith have also discovered its location. On their journey to {{planet2}}, {{characterName}} encounters a small village under siege by a Sith battalion. A choice arises",
-          "choices": {
-            "good": {
-              "onclick": "protectVillage",
-              "choice_text": "Protect the village."
-            },
-            "evil": {
-              "onclick": "ignoreVillage",
-              "choice_text": "Ignore the villagers’ plight."
-            }
-          }
+        "join_war": {
+            "text": "You join the Republic forces, leading a battalion of clone troopers into battle. After a hard-fought victory, you sense something dark brewing. Do you...",
+            "choices": [
+                {
+                    "text": "Pursue the source of the disturbance.",
+                    "go_to": "dark_disturbance"
+                },
+                {
+                    "text": "Return to the Jedi Temple for reinforcements.",
+                    "go_to": "temple_return"
+                }
+            ]
         },
-        "part3": {
-          "text": "{{characterName}} reaches the Starforge Crystal deep within the Caverns of Light and Shadow. There, they face a final choice: destroy the crystal to prevent its misuse or harness its power for themselves. {{characterName}} is confronted by a vision of their future, a reflection of all their choices leading to this moment",
-          "choices": {
-            "good": {
-              "onclick": "destroyCrystal",
-              "choice_text": "Destroy the crystal, sacrificing its potential for the greater good."
-            },
-            "evil": {
-              "onclick": "absorbCrystal",
-              "choice_text": "Absorb its energy, becoming a being of unrivaled power"
-            }
-          }
+        "investigate_force": {
+            "text": "You follow the ripples of the Force to a remote planet. There, you uncover an ancient Sith artifact radiating dark energy. Do you...",
+            "choices": [
+                {
+                    "text": "Attempt to destroy the artifact.",
+                    "go_to": "destroy_artifact"
+                },
+                {
+                    "text": "Bring the artifact back to the Jedi Temple for study.",
+                    "go_to": "artifact_study"
+                }
+            ]
         },
-        "endings": {
-          "good": "{{characterName}} restores balance to the galaxy.",
-          "evil": "{{characterName}} becomes the galaxy’s most feared force.",
-          "mixed": "{{characterName}}'s fate remains uncertain."
+        "seek_guidance": {
+            "text": "The Jedi Council advises caution and assigns you to investigate rumors of a hidden Sith lord. Your search leads you to an abandoned starship. Do you...",
+            "choices": [
+                {
+                    "text": "Board the starship to search for clues.",
+                    "go_to": "starship_clues"
+                },
+                {
+                    "text": "Set a trap to lure the Sith out of hiding.",
+                    "go_to": "sith_trap"
+                }
+            ]
+        },
+        "dark_disturbance": {
+            "text": "You track the disturbance to a Separatist base. Inside, you find evidence of a Sith manipulating both sides of the war. You report this to the Council. **Congratulations, you've uncovered a critical truth!**"
+        },
+        "temple_return": {
+            "text": "Back at the Jedi Temple, you share your findings. The Council acknowledges your wisdom in seeking help, and together, you prepare a decisive plan. **Congratulations, you've strengthened the Jedi Order!**"
+        },
+        "destroy_artifact": {
+            "text": "You channel all your strength into destroying the Sith artifact. The process is dangerous, but you succeed. The dark energy dissipates. **Congratulations, you've vanquished a great evil!**"
+        },
+        "artifact_study": {
+            "text": "You bring the artifact to the Temple, where the Council studies its secrets. Your decision provides valuable insights into the Sith. **Congratulations, you've advanced the knowledge of the Jedi!**"
+        },
+        "starship_clues": {
+            "text": "On the starship, you discover a Sith holocron containing critical information. Using the knowledge, you thwart a Sith plot. **Congratulations, you've protected the galaxy!**"
+        },
+        "sith_trap": {
+            "text": "Your trap works, and the Sith lord reveals themselves. After an intense duel, you emerge victorious. **Congratulations, you've defeated a powerful enemy of the Republic!**"
         }
-      }
-    },
-    "lostHeir": {
-      "template": {
-        "intro": "Rumors of a lost heir to the Mandalorian throne reach {{characterName}}, thrusting them into a dangerous pursuit...",
-        "part1": {
-          "text": "A bounty hunter confronts {{characterName}} with cryptic information...",
-          "choices": {
-            "good": {
-              "onclick": "helpHunter",
-              "choice_text": "Assist the bounty hunter."
-            },
-            "evil": {
-              "onclick": "betrayHunter",
-              "choice_text": "Betray the bounty hunter for the information."
-            }
-          }
-        },
-        "part2": {
-          "text": "Following the trail, {{characterName}} uncovers an artifact tied to the Mandalorian legacy...",
-          "choices": {
-            "good": {
-              "onclick": "defendArtifact",
-              "choice_text": "Defend the artifact."
-            },
-            "evil": {
-              "onclick": "stealArtifact",
-              "choice_text": "Steal the artifact for yourself."
-            }
-          }
-        },
-        "part3": {
-          "text": "At the gates of the Mandalorian enclave, {{characterName}} must decide the heir's fate...",
-          "choices": {
-            "good": {
-              "onclick": "restoreHeir",
-              "choice_text": "Restore the heir to their rightful place."
-            },
-            "evil": {
-              "onclick": "usurpThrone",
-              "choice_text": "Usurp the throne for yourself."
-            }
-          }
-        },
-        "endings": {
-          "good": "{{characterName}} brings honor and stability to Mandalore.",
-          "evil": "{{characterName}} rules Mandalore with an iron fist.",
-          "mixed": "The legacy of Mandalore remains shrouded in uncertainty."
-        }
-      }
     }
-  }
 }
